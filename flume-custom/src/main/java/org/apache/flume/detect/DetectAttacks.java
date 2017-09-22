@@ -1,4 +1,4 @@
-package org.apache.flume.custom;
+package org.apache.flume.detect;
 
 public interface DetectAttacks {
 	public void Detect();
