@@ -28,9 +28,9 @@ public class RegexTest{
 	//"(?:et(?:\\b\\W+?\\blocalgroup|\\.exe)|(?:map|c)\\.exe)" means "map.exe" or "c.exe" or "et.exe" or "et % localgroup"
 	//"|":所在括号的前半部全是，后半部全是。
 	
-	private static String r = "(?:et(?:\\b\\W+?\\blocalgroup|\\.exe)|"		
-	+ "(?:map|c)\\.exe)";
-	private static String str = "SELECT/*avoid-spaces*/password/**/FROM/**/Members";
+	private static String r = "(?i:(?:m(?:s(?:ysaccessobjects|ysaces|ysobjects|ysqueries|ysrelationships|ysaccessstorage|ysaccessxml|ysmodules|ysmodules2|db)|aster\\.\\.sysdatabases|ysql\\.db)|"
+			+ "s(?:ys(?:\\.database_name|aux)|chema(?:\\W*\\(|_name)|qlite(_temp)?_master)|d(?:atabas|b_nam)e\\W*\\(|information_schema|pg_(catalog|toast)|northwind|tempdb))";
+	private static String str = "ascii(substr((select table_name information_schema.tables where tables_schema=database()limit 0,1),1,1))=101 --+";
 	
 	public static void main(String[] args){
 		
