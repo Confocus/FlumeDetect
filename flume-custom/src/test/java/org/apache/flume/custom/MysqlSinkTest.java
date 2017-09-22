@@ -1,4 +1,4 @@
-package org.flume.custom;
+package org.apache.flume.custom;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

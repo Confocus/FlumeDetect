@@ -1,11 +1,12 @@
 package org.apache.flume.custom;
 
 public interface DetectAttacks {
+	public void Detect();
 	
-	public void getAttackType();
+	public String getAttackType();
 	
-	public void getAttackAction();
+	public String getAttackAction();
 	
-	public void getAttackRegex();
+	public String getAttackRegex();
 	
 }
