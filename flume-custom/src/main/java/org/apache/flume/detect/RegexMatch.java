@@ -9,7 +9,7 @@ public class RegexMatch {
 		
 	}
 	
-	public static boolean match(String regEx, String str){
+	public static boolean matches(String regEx, String str){
 		Pattern pattern = Pattern.compile(regEx);
 		Matcher matcher = pattern.matcher(str);
 		boolean rs = matcher.matches();
@@ -20,6 +20,11 @@ public class RegexMatch {
 		Pattern pattern = Pattern.compile(regEx);
 		Matcher matcher = pattern.matcher(str);
 		boolean rs = matcher.find();
+		
+		if(rs){
+			System.out.println(matcher.group());
+		}
+		
 		return rs;
 	}
 	
